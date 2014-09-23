@@ -1,0 +1,36 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Foo HTTP\n"
+"POT-Creation-Date: 2012-10-31 16:57-0430\n"
+"PO-Revision-Date: 2012-10-31 16:59-0430\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../view/MatchingViewSelector.php:37
+msgid "View selection rule '{matcher}' doesn't comply with the defined syntax"
+msgstr "Regla de selección de vistas '{matcher}' no cumple con la sintaxis"
+
+#: ../view/MatchingViewSelector.php:39
+msgid "View selection matcher '{matcher}' isn't registered"
+msgstr "El comparador de selección de vistas '{matcher}' no está registrado"
+
+#: ../view/MatchingViewSelector.php:41
+msgid "View selection rule '{rule}' doesn't look like one"
+msgstr "La regla de selección de vistas '{rule}' no luce como una"
+
+#: ../view/PhpView.php:74
+msgid "View resource '{file}' does not exists"
+msgstr "Recurso de vista '{file}' no existe"
+
+#: ../view/PhpView.php:76
+msgid "View option not set"
+msgstr "Opción de vista no establecida"

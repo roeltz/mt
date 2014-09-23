@@ -1,0 +1,13 @@
+[namespaces]
+data="."
+
+[namespace-aliases]
+orm="data\\orm\\annotations"
+
+[require]
+defaults="orm/.defaults.php"
+
+[class-aliases]
+R="data\\core\\Restrict"
+Limit="data\\core\\criterion\\Limit"
+Order="data\\core\\criterion\\Order"

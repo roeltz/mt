@@ -1,0 +1,6 @@
+[paths]
+source="src/*"
+libraries="lib/*"
+
+[hook-paths]
+hooks="src/hooks/*"

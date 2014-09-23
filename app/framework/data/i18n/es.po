@@ -1,0 +1,56 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Foo Data\n"
+"POT-Creation-Date: 2012-10-31 14:23-0430\n"
+"PO-Revision-Date: 2012-10-31 14:28-0430\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../core/Connections.php:15
+msgid "DataSource '{id}' not set"
+msgstr "El DataSource '{id}' no ha sido definido"
+
+#: ../core/Criteria.php:88
+msgid "A collection has not been set for the criteria"
+msgstr "No se ha establecido una colección para la criteria"
+
+#: ../core/expression/JunctionExpression.php:20
+msgid "Attempted to include a non-expression in junction expression"
+msgstr "Se intentó incluir una no-expresión en la disyunción/conjunción"
+
+#: ../orm/Descriptor.php:73
+msgid "Class {class} lacks @orm\\Collection annotation"
+msgstr "A la clase {class} le falta la anotación @orm\\Collection"
+
+#: ../orm/ORM.php:101
+msgid "Object of class {class} already exists: {message}"
+msgstr "Objeto de clase {class} ya existe: {message}"
+
+#: ../orm/ORM.php:232
+msgid ""
+"{class} class is not bound to a SQLDataSource. SQL queries on this class are "
+"not possible."
+msgstr ""
+"La clase {class} no está asociada a un SQLDataSource. Los queries SQL sobre "
+"esta clase no son posibles."
+
+#: ../orm/ORM.php:337
+msgid "Not-null property {class}::{property} is null"
+msgstr "La propiedad not-null {class}::{property} tiene valor null"
+
+#: ../orm/cache/TransformationsCache.php:16
+msgid "Unregistered transformation '{filter}'"
+msgstr "Transformación '{filter}' no registrada"
+
+#: ../sources/pgsql/PostgreSQLDataSource.php:43
+msgid "Could not connect to database"
+msgstr "No se pudo conectar a la base de datos"

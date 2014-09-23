@@ -1,0 +1,10 @@
+[namespace-aliases]
+html="foo\\http\\annotations\\html"
+http="foo\\http\\annotations\\http"
+view="foo\\http\\annotations\\view"
+
+[require]
+defaults=".defaults.php"
+
+[i18n]
+default="i18n/{locale}.mo"

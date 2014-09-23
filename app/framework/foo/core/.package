@@ -1,0 +1,17 @@
+[paths]
+framework="../.."
+
+[namespaces]
+foo=".."
+
+[namespace-aliases]
+req="foo\\core\\annotations\\req"
+view="foo\\core\\annotations\\view"
+
+[require]
+underscore-function="locale/underscore.php"
+locale-resources="locale/.defaults.php"
+cache="../util/cache/.defaults.php"
+
+[i18n]
+default="i18n/{locale}.mo"

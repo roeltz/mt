@@ -1,0 +1,9 @@
+[namespaces]
+entity="."
+
+[namespace-aliases]
+ent="entity\\core\\annotations"
+assert="entity\\validation\\annotations"
+
+[i18n]
+default="i18n/{locale}.mo"
