@@ -22,6 +22,7 @@ class MwbImporter implements Importer {
 		'com.mysql.rdbms.mysql.datatype.text'=>Type::TEXT,
 		'com.mysql.rdbms.mysql.datatype.longtext'=>Type::TEXT,
 		'com.mysql.rdbms.mysql.datatype.datetime'=>Type::DATETIME,
+		'com.mysql.rdbms.mysql.datatype.datetime_f'=>Type::DATETIME,
 		'com.mysql.rdbms.mysql.datatype.date'=>Type::DATE,
 		'com.mysql.rdbms.mysql.datatype.time'=>Type::TIME,
 		'com.mysql.rdbms.mysql.datatype.boolean'=>Type::BOOLEAN,

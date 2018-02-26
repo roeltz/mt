@@ -132,21 +132,27 @@ class PipaExporter implements Exporter {
 
 			foreach($properties as $property) {
 				@list($property, $where) = preg_split('/\s*\?\s*/', $property);
-				@list($property, $relatedEntity) = preg_split('/\s+/', $property);
+				@list($property, $relatedEntity, $sort) = preg_split('/\s+/', $property);
 				
 				if (!$relatedEntity) {
 					$relatedEntity = $property;
 					$property = null;
 				}
 
-				@list($relatedEntity, $fk) = preg_split('/\s*:\s*/', $relatedEntity);
+				@list($relatedEntity, $fk, $subproperty) = preg_split('/\s*:\s*/', $relatedEntity);
 				$fk = preg_split('/\s*,\s*/', $fk);
 
 				if (!$property)
 					$property = $relatedEntity;
-
+				
 				if (count($fk) == 1)
 					$fk = $fk[0];
+				
+				if ($sort) {
+					$type = $sort[0] == "+" ? 1 : -1;
+					$sortProperty = substr($type, 1);
+					$sort = array($sortProperty=>$type);
+				}
 				
 				if ($where) {
 					$expressions = preg_split('/\s*,\s*/', $where);
@@ -172,6 +178,10 @@ class PipaExporter implements Exporter {
 				$annotation->addParameter("fk", $fk);
 				if (@$restrictions)
 					$annotation->addParameter("where", $restrictions);
+				if (@$subproperty)
+					$annotation->addParameter("property", $subproperty);
+				if ($sort)
+					$annotation->addParameter("order", $sort);
 				$property->docBlock->addAnnotation($annotation);
 				$class->addProperty($property);
 			}
@@ -305,6 +315,10 @@ class PipaExporter implements Exporter {
 		switch($value) {
 			case "null":
 				return array(null, null);
+			case "true":
+				return array(null, true);
+			case "false":
+				return array(null, false);
 			case "#now":
 				return array("DateTime", array('assign'=>"new DateTime()"));
 			case "#hash":
