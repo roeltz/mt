@@ -128,6 +128,16 @@ class PipaExporter implements Exporter {
 		}
 
 		if ($many = @$entity->meta['many']) {
+			/*
+			 * Syntax:
+			 * @many <relation>;[<relation[n]>]
+			 * <relation>:      [<property>] <relatedEntity> <sort>[?<where>]
+			 * <relatedEntity>: <table>:<fk>[:<subproperty>]
+			 * <fk>:            <field>[,<field[n]>]
+			 * <where>:         <expression>[,<expression[n]>]
+			 * <expression>:    <field>={<value>|this}
+			 * <sort>:          [+]<field>
+			 */
 			$properties = preg_split('/\s*;\s*/', $many);
 
 			foreach($properties as $property) {
